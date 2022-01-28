@@ -1,0 +1,50 @@
+﻿@page
+@model AnnouncementsWeb.Views.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>CAnnouncement</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="CAnnouncement.AnnId" />
+            <div class="form-group">
+                <label asp-for="CAnnouncement.Price" class="control-label"></label>
+                <input asp-for="CAnnouncement.Price" class="form-control" />
+                <span asp-validation-for="CAnnouncement.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CAnnouncement.DateTimeCreation" class="control-label"></label>
+                <input asp-for="CAnnouncement.DateTimeCreation" class="form-control" />
+                <span asp-validation-for="CAnnouncement.DateTimeCreation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CAnnouncement.NameOfAnn" class="control-label"></label>
+                <input asp-for="CAnnouncement.NameOfAnn" class="form-control" />
+                <span asp-validation-for="CAnnouncement.NameOfAnn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CAnnouncement.Comment" class="control-label"></label>
+                <input asp-for="CAnnouncement.Comment" class="form-control" />
+                <span asp-validation-for="CAnnouncement.Comment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

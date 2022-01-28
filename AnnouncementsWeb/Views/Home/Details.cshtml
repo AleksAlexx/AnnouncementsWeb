@@ -1,0 +1,43 @@
+﻿@page
+@model AnnouncementsWeb.Views.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>CAnnouncement</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CAnnouncement.Price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CAnnouncement.Price)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CAnnouncement.DateTimeCreation)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CAnnouncement.DateTimeCreation)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CAnnouncement.NameOfAnn)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CAnnouncement.NameOfAnn)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CAnnouncement.Comment)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CAnnouncement.Comment)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.CAnnouncement.AnnId">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
